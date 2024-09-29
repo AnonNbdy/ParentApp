@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Dashboard Group -->
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/scan_qr"
+            android:icon="@drawable/baseline_qr_code_scanner_24"
+            android:title="@string/scan_qr_code" />
+
+        <item android:id="@+id/Reprint"
+            android:icon="@drawable/baseline_qr_code_24"
+            android:title="@string/re_print_qr" />
+
+        <item android:id="@+id/Issue"
+            android:icon="@drawable/baseline_add_alert_24"
+            android:title="@string/report_issue" />
+
+        <item android:id="@+id/notification"
+            android:icon="@drawable/baseline_message_24"
+            android:title="@string/notifications" />
+
+    </group>
+
+    <!-- Profile and System Options Group -->
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/profile"
+            android:icon="@drawable/baseline_person_24"
+            android:title="Profile" />
+
+        <item android:id="@+id/about_us"
+            android:icon="@drawable/baseline_info_24"
+            android:title="About Us" />
+
+        <item android:id="@+id/logout"
+            android:icon="@drawable/baseline_logout_24"
+            android:title="Logout" />
+    </group>
+</menu>

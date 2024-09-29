@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    tools:context=".MainActivity">
+
+    <!-- Top View (Background/Header) -->
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_view" />
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_marginTop="2sp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/l"
+        android:contentDescription="@string/qr_code_for_student"/>
+
+    <!-- Title for Re-Print QR -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/re_print_qr_code"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Logo"/>
+
+    <!-- Textbox for Parent to enter Student ID -->
+    <EditText
+        android:id="@+id/student_id_input"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:autofillHints="Student Number"
+        android:hint="@string/enter_student_id"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textColorHint="#546E7A" />
+
+    <!-- Reprint QR Button -->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/reprint_qr_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/student_id_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/reprint_qr"
+        android:textColor="#FFEB3B"
+        android:textStyle="bold"
+        android:background="@drawable/bacl"
+        app:iconTint="#090909" />
+
+    <!-- QR ImageView (This will hold the re-printed QR code) -->
+    <ImageView
+        android:id="@+id/qr_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/reprint_qr_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/qr_code_for_student"
+        android:src="@drawable/baseline_qr_code_24"
+        tools:ignore="ImageContrastCheck" />
+
+    <!-- Save QR Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save_qr_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_qr_to_phone"
+        android:layout_below="@id/qr_image"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bacl"
+        android:textColor="#FFEB3B"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        app:iconTint="#090909"/>
+
+
+
+</RelativeLayout>
